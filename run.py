@@ -29,6 +29,7 @@ def validate_data(values):
     Check if the user enter sex integer values
     """
     try: 
+        [int (value) for value in values]
         if len(values) != 6:
             raise ValueError(f"Exactly 6 values requierd, you provided {len(values)}")
     except ValueError as e:
